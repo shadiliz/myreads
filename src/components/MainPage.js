@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-
+// import Link from React Route Dom
+import { Link } from 'react-router-dom';
 import Book from "./Book";
 
 
@@ -73,7 +74,9 @@ class MainPage extends Component {
               </div>
             </div>
             <div className="open-search">
-              <button onClick={() => this.setState({ showSearchPage: true })}>Add a book</button>
+              <link
+               to="/search">
+               Add a book</link>
             </div>
           </div>
 		);
