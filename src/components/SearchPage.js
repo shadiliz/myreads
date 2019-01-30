@@ -41,9 +41,10 @@ class SearchPage extends Component {
     <div className="search-books">
             <div className="search-books-bar">
       
-              <link
-                to="/"
-               className="close-search">Close</link>
+            <Link
+             to="/"
+            className="close-search"
+            >Close</Link>
 
               <div className="search-books-input-wrapper">
                 <input type="text"

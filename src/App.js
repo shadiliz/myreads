@@ -38,7 +38,7 @@ class BooksApp extends React.Component {
       /> 
         )} />
      
-    <Route path="/seach" render={() => (
+    <Route path="/search" render={() => (
      <SearchPage 
         moveShelf={this.moveShelf}
         /> 

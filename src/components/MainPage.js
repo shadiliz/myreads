@@ -74,9 +74,9 @@ class MainPage extends Component {
               </div>
             </div>
             <div className="open-search">
-              <link
+              <Link
                to="/search">
-               Add a book</link>
+               Add a book</Link>
             </div>
           </div>
 		);
