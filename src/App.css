@@ -3,12 +3,13 @@ html, body, .root {
 }
 
 body {
-  line-height: 1.5;
+  line-height: 1.5; 
 }
 
 body, .app {
-  background: white;
+  background: #F0FFF0; /* ADDED */
 }
+
 
 /* main page */
 
@@ -22,6 +23,8 @@ body, .app {
   font-weight: 400;
   margin: 0;
   color: white;
+  font-family: Papyrus; /* ADDED */
+
 }
 
 .list-books-content {
@@ -83,7 +86,6 @@ body, .app {
   z-index: 5;
   display: flex;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 0 6px rgba(0,0,0,0.23);
- /* background: #f1f1f1;*/
 }
 
 .search-books-input-wrapper {

@@ -19,14 +19,20 @@ class SearchPage extends Component {
     })
     this.updateBookSearch(query);
   }
- 
  updateBookSearch = (query) => {
   if (query) {
   BooksAPI.search(query).then((bookSearch) => {
     if (bookSearch.error) {
       this.setState({ bookSearch: [] });
     } else {
-   this.setState({ bookSearch: bookSearch }) 
+      const result = bookSearch.map(book => {
+        const existingBook = this.props.books.find(b => b.id === book.id)
+        if (existingBook) {
+          book.shelf = existingBook.shelf 
+        }
+        return book
+      })
+   this.setState({ bookSearch: result }) 
     }
   })
   } else {
@@ -36,7 +42,7 @@ class SearchPage extends Component {
 
 
   render () {
-  
+    const { bookSearch } = this.state
     return (
     <div className="search-books">
             <div className="search-books-bar">
@@ -58,25 +64,26 @@ class SearchPage extends Component {
 
             <div className="search-books-results">
 
-        
+
               <ol className="books-grid">
                 {
-                  this.state.bookSearch.map(bookSearch => {
-                    let shelf="none";
-                    this.props.books.map(book => (
-                    book.id === bookSearch.id ? 
-                    shelf = book.shelf :
+                // this.state.bookSearch.map(bookSearch => {
+                     //let shelf="none":
+                   /* this.props.books.map(book => (
+                     book.id === bookSearch.id ? 
+                   
                     ''  
-                      ));
-                    return (
+                      )); 
+                    return ( */ 
                     <li key={bookSearch.id}>
                     <Book 
                     book={bookSearch}
                     moveShelf={this.props.moveShelf}
-                    presentShelf={shelf}
-                    />
+                    //presentShelf={shelf}
+                    //shelf={book.shelf}
+                    /> 
+
                     </li>
-                    );
                   })
                 }
               </ol>

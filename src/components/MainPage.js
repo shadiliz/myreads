@@ -5,9 +5,10 @@ import { Button } from '@material-ui/core';
 import Book from "./Book";
 
 
+
 class MainPage extends Component {
 	render () {
-    console.log(this.props.books);
+    //console.log(this.props.books);
 		return (
 		        <div className="list-books">
             <div className="list-books-title">
@@ -78,8 +79,7 @@ class MainPage extends Component {
               <Link
                to='/search'
                >
-               <Button color="inherit">Search</Button>
-
+               <Button>Search</Button>
                </Link>
             </div>
           </div>
