@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+import './Book.css';
 class Book extends Component {
 	render () {
         let shownThumbnail = this.props.book.imageLinks ? 

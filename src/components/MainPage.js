@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 // import Link from React Route Dom
 import { Link } from 'react-router-dom';
+import { Button } from '@material-ui/core';
 import Book from "./Book";
 
 
@@ -75,8 +76,11 @@ class MainPage extends Component {
             </div>
             <div className="open-search">
               <Link
-               to="/search">
-               Add a book</Link>
+               to='/search'
+               >
+               <Button color="inherit">Search</Button>
+
+               </Link>
             </div>
           </div>
 		);
